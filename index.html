@@ -194,7 +194,7 @@
     <section class="bg-slate-100 flex-row-reverse justify-center items-center ">
         <div class="w-full bg-slate-200">
             <div class="flex justify-center ">
-                <div class="flex w-3/4 gap-x-52 bg-white">
+                <div class="flex w-3/4 gap-x-20 bg-white">
                     <div class=" ">
                         <h2 class="text-lg font-semibold p-5 ml-5">Select Your Seat</h2>
                         <!-- available and selected -->
@@ -214,47 +214,86 @@
                         <!-- ------------ -->
 
                         <div class="mt-6 ml-4">
-                            <div class="flex grid-cols-2 justify-evenly mb-5 ">
+                            <div class="flex grid-cols-2 justify-evenly mb-5 font-bold text-slate-500">
                                 <p>A</p>
-                                <div id="A1" class="bg-slate-200 allBtn p-2 px-6 rounded-lg">
+                                <div id="A1" class="bg-slate-100 allBtn p-2 px-6 rounded-lg">
                                     <button>A1</button>
                                 </div>
-                                <div id="A2" class="bg-slate-200 allBtn p-2 px-6 rounded-lg">
-                                   <button>A2</button>
+                                <div id="A2" class="bg-slate-100 allBtn p-2 px-6 rounded-lg">
+                                    <button>A2</button>
                                 </div>
-                                <div id="A3" class="bg-slate-200 allBtn p-2 px-6 rounded-lg">
+                                <div id="A3" class="bg-slate-100 allBtn p-2 px-6 rounded-lg">
                                     <button>A3</button>
                                 </div>
-                                <div id="A4" class="bg-slate-200 allBtn p-2 px-6 rounded-lg">
+                                <div id="A4" class="bg-slate-100 allBtn p-2 px-6 rounded-lg">
                                     <button>A4</button>
                                 </div>
                             </div>
-                            <div class="flex grid-cols-2 justify-evenly">
+                            <div class="flex grid-cols-2 justify-evenly font-bold text-slate-500">
                                 <p>B</p>
-                                <div id="B1" class="bg-slate-200  allBtn p-2 px-6 rounded-lg">
+                                <div id="B1" class="bg-slate-100  allBtn p-2 px-6 rounded-lg">
                                     <button>B1</button>
                                 </div>
-                                <div id="B2" class="bg-slate-200  allBtn p-2 px-6 rounded-lg">
+                                <div id="B2" class="bg-slate-100  allBtn p-2 px-6 rounded-lg">
                                     <button>B2</button>
                                 </div>
-                                <div id="B3" class="bg-slate-200  allBtn p-2 px-6 rounded-lg">
+                                <div id="B3" class="bg-slate-100  allBtn p-2 px-6 rounded-lg">
                                     <button>B3</button>
                                 </div>
-                                <div id="B4" class="bg-slate-200 allBtn  p-2 px-6 rounded-lg">
+                                <div id="B4" class="bg-slate-100 allBtn  p-2 px-6 rounded-lg">
                                     <button>B4</button>
                                 </div>
                             </div>
+                            <!-- ccccccccccc -->
+                            <div class=" mt-6 flex grid-cols-2 justify-evenly font-bold text-slate-500">
+                                <p>C</p>
+                                <div id="B1" class="bg-slate-100  allBtn p-2 px-6 rounded-lg">
+                                    <button>C1</button>
+                                </div>
+                                <div id="B2" class="bg-slate-100  allBtn p-2 px-6 rounded-lg">
+                                    <button>C2</button>
+                                </div>
+                                <div id="B3" class="bg-slate-100  allBtn p-2 px-6 rounded-lg">
+                                    <button>C3</button>
+                                </div>
+                                <div id="B4" class="bg-slate-100 allBtn  p-2 px-6 rounded-lg">
+                                    <button>C4</button>
+                                </div>
+                            </div>
+                            <!-- DDDDDDDDDDDDD -->
+                            <div class=" mt-6 flex grid-cols-2 justify-evenly font-bold text-slate-500">
+                                <p>D</p>
+                                <div id="B1" class="bg-slate-100  allBtn p-2 px-6 rounded-lg">
+                                    <button>D1</button>
+                                </div>
+                                <div id="B2" class="bg-slate-100  allBtn p-2 px-6 rounded-lg">
+                                    <button>D2</button>
+                                </div>
+                                <div id="B3" class="bg-slate-100  allBtn p-2 px-6 rounded-lg">
+                                    <button>D3</button>
+                                </div>
+                                <div id="B4" class="bg-slate-100 allBtn  p-2 px-6 rounded-lg">
+                                    <button>D4</button>
+                                </div>
+                            </div>
+                            <!-- DDDDDDDDDDDDD -->
+
+
                         </div>
 
                         <!-- ------------ -->
                     </div>
 
+                    <img src="images/info-devider.png" alt="">
+
+
 
                     <!-- Right Seat Calculation-->
-                    <div class=" mt-5 ">
+                    <div class="  ">
                         <div class="">
                             <h2 class="text-lg font-semibold p-5">Select Your Seat</h2>
                         </div>
+                        <hr>
                         <div class="flex justify-between  flex-col">
                             <ul id="select-container" class="flex gap-x-20 font-semibold">
                                 <li>Seat</li>
@@ -262,11 +301,25 @@
                                 <li>Price</li>
                             </ul>
                         </div>
-                        <div class="flex">
-                            <ul id="selected-place-container" class=" flex flex-col gap-x-20 font-semibold ">
-                                
+                        <div class="flex mt-3">
+                            <ul id="selected-place-container" class="  flex flex-col gap-x-20 font-semibold ">
+
                             </ul>
                         </div>
+                        <hr>
+                        <div class="flex justify-between  flex-col mt-3">
+                            <ul id="select-container" class="flex gap-x-20 font-semibold">
+                                <li>Total Price</li>
+                                <li></li>
+                                <li>BDT <span id="total-cost">0</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- coupon input -->
+                        <label class="input input-bordered flex items-center mt-5">
+                            <input type="text" class="" placeholder="Have any Coupon" />
+                            <span class="bg-green-500 px-4 rounded-lg font-semibold text-white">Apply</span>
+                        </label>
 
                     </div>
 

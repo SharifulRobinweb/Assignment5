@@ -12,7 +12,9 @@ for (const btn of allBtn) {
         const selectedSeat = document.getElementById('selected-seat');
         selectedSeat.innerText = count;
 
-        btn.classList.add('bg-orange-400');
+        btn.classList.add('bg-green-400');
+        btn.classList.add('text-white');
+        
 
 
         const remainSeat = document.getElementById('remain-seat');
@@ -43,6 +45,13 @@ for (const btn of allBtn) {
         li.appendChild(p2);
         li.appendChild(p3);
         selectedContainer.appendChild(li);
+
+        // Total cost
+        const totalCost = document.getElementById("total-cost").innerText;
+        const convertedTotalCost = parseInt(totalCost);
+
+        document.getElementById('total-cost').innerText = convertedTotalCost + parseInt(price);
+
 
         
 
