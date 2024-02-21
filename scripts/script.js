@@ -72,7 +72,7 @@ for (const btn of allBtn) {
 
             // setInnerText("total-cost",sum);
             // setInnerText("grand-cost",sum2);
-            grandTotalCostFun("grand-cost",parseInt(price));
+            totalCostFun("grand-cost",parseInt(price));
 
             e.target.setAttribute("disabled",true);
         }
@@ -91,18 +91,25 @@ function totalCostFun(id,value){
     setInnerText(id,sum);
 }
 
-function grandTotalCostFun(id,value){
-    const totalCost = document.getElementById(id).innerText;
-    const convertedTotalCost = parseInt(totalCost);
-    const sum = convertedTotalCost + parseInt(value); 
+// function grandTotal(category){
+//     const totalCost = document.getElementById("total-cost").innerText;
+//     const convertedTotalCost = parseInt(totalCost);
+//     // const sum = convertedTotalCost + parseInt(value); 
+//     if( value == 'new15'){
+//         setInnerText('grand-cost',convertedTotalCost+100);
+//     }
 
-    setInnerText(id,sum);
-}
+
+// }
 
 
 function setInnerText(id,value){
     document.getElementById(id).innerText = value;
 
+}
+function hideElement(){
+    const hide = document.getElementById('mainSection');
+    hide.classList.add('hidden');
 }
 
 
