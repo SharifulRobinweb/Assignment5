@@ -12,6 +12,8 @@ for (const btn of allBtn) {
         const selectedSeat = document.getElementById('selected-seat');
         selectedSeat.innerText = count;
 
+        btn.classList.add('bg-orange-400');
+
 
         const remainSeat = document.getElementById('remain-seat');
         remainSeat.innerText = remain;
@@ -20,14 +22,29 @@ for (const btn of allBtn) {
 
 
         const seat = e.target.parentNode.childNodes[1].innerText;
-        console.log(e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[9].childNodes[3].childNodes[1].childNodes[5].childNodes[3].childNodes[1].childNodes[1].innerText);
+        // console.log(e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[9].childNodes[3].childNodes[1].childNodes[5].childNodes[3].childNodes[1].childNodes[1].innerText);
+        const price = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[9].childNodes[3].childNodes[1].childNodes[5].childNodes[3].childNodes[1].childNodes[1].innerText;
 
+        // const economoy = Economy;
 
+        const selectedContainer = document.getElementById("selected-place-container");
 
+        const li = document.createElement("li");
+        li.classList.add('flex');
+        li.classList.add('gap-x-20');
+        const p = document.createElement("p");
+        p.innerText = seat;
+        const p2 = document.createElement("p");
+        p2.innerText = "economoy";
+        const p3 = document.createElement("p");
+        p3.innerText = price;
 
+        li.appendChild(p);
+        li.appendChild(p2);
+        li.appendChild(p3);
+        selectedContainer.appendChild(li);
 
-
-
+        
 
 
     })
