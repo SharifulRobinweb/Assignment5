@@ -7,6 +7,7 @@
     <title>P-Ticket</title>
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -56,7 +57,7 @@
                         the app. <br> The integrated testing features allow for a streamlined.</p>
                     <div class="flex justify-center mt-4">
                         <button class="btn bg-lime-400 text-white border border-green-600 font-extrabold px-8">Buy
-                            Ticket</button>
+                            Tickets</button>
                     </div>
                 </div>
             </div>
@@ -132,7 +133,7 @@
                             <div>
                                 <img src="images/seat-green.png" alt="">
                             </div>
-                            <p class="font-semibold text-green-500">40 Seats left</p>
+                            <p class="font-semibold text-green-500"><span id="remain-seat">8</span> Seats left</p>
                         </div>
                     </div>
                     <!-- Route -->
@@ -172,12 +173,13 @@
                 </div>
 
                 <!-- 550 Taka -->
-                <div class="flex items-center justify-center">
+                <div class="flex flex-col items-center justify-center">
                     <div>
                         <img src="images/fare.png" alt="">
                     </div>
-                    <div>
-                        <h2 class="text-2xl font-bold">550 Taka</h2>
+
+                    <div class="flex justify-center flex-col items-center">
+                        <h2 class="text-2xl font-bold"> <span>550</span> Taka</h2>
                         <p>Per Seat</p>
                     </div>
                 </div>
@@ -192,99 +194,75 @@
     <section class="bg-slate-100 flex-row-reverse justify-center items-center ">
         <div class="w-full bg-slate-200">
             <div class="flex justify-center ">
-                <div class="flex w-3/4 justify-between bg-white">
-                    <div>
-                        <h2 class="text-lg font-semibold p-5">Select Your Seat</h2>
+                <div class="flex w-3/4 gap-x-52 bg-white">
+                    <div class=" ">
+                        <h2 class="text-lg font-semibold p-5 ml-5">Select Your Seat</h2>
                         <!-- available and selected -->
                         <div class="flex justify-between">
                             <div class="flex justify-between">
-                                <div class="flex">
+                                <div class="flex ml-8">
                                     <img src="images/seat-gray.png" alt="">
-                                    <h3>available</h3>
+                                    <h3 class="">available</h3>
                                 </div>
                                 <div class="flex ml-96">
                                     <img src="images/seat-green-filled.png" alt="">
-                                    <h3>Selected</h3>
+                                    <h3><span id="selected-seat">0</span>Selected</h3>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <!-- ------------ -->
-                       <!-- <Div class="flex grid grid-cols-5 ">
-                            <div><p>A</p></div>
-                            <div><p>A1</p></div>
-                            <div><p>A2</p></div>
-                            <div><p>A3</p></div>
-                            <div><p>A4</p></div>
-                            <div><p>B</p></div>
-                            <div><p>B1</p></div>
-                            <div><p>B2</p></div>
-                            <div><p>B3</p></div>
-                            <div><p>B4</p></div>
-                            
-                            
-                       </Div> -->
-                                <div class="mt-6 ml-4">
-                                    <div class="flex grid-cols-2 justify-between mb-5 ">
-                                        <p>A</p>
-                                        <div class="bg-slate-200 p-2 px-6 rounded-lg"><p>A1</p></div>
-                                        <div class="bg-slate-200 p-2 px-6 rounded-lg"><p>A2</p></div>
-                                        <div class="bg-slate-200 p-2 px-6 rounded-lg"><p>A3</p></div>
-                                        <div class="bg-slate-200 p-2 px-6 rounded-lg"><p>A4</p></div>
+
+                        <div class="mt-6 ml-4">
+                            <div class="flex grid-cols-2 justify-evenly mb-5 ">
+                                <p>A</p>
+                                <div id="A1" class="bg-slate-200 allBtn p-2 px-6 rounded-lg">
+                                    <p>A1</p>
                                 </div>
-                                <div class="flex grid-cols-2 justify-between">
-                                    <p>B</p>
-                                        <div class="bg-slate-200 p-2 px-6 rounded-lg"><p>B1</p></div>
-                                        <div class="bg-slate-200 p-2 px-6 rounded-lg"><p>B2</p></div>
-                                        <div class="bg-slate-200 p-2 px-6 rounded-lg"><p>B3</p></div>
-                                        <div class="bg-slate-200 p-2 px-6 rounded-lg"><p>B4</p></div>
-                                    </div>
+                                <div id="A2" class="bg-slate-200 allBtn p-2 px-6 rounded-lg">
+                                    <p>A2</p>
                                 </div>
-                        
+                                <div id="A3" class="bg-slate-200 allBtn p-2 px-6 rounded-lg">
+                                    <p>A3</p>
+                                </div>
+                                <div id="A4" class="bg-slate-200 allBtn p-2 px-6 rounded-lg">
+                                    <p>A4</p>
+                                </div>
+                            </div>
+                            <div class="flex grid-cols-2 justify-evenly">
+                                <p>B</p>
+                                <div id="B1" class="bg-slate-200  allBtn p-2 px-6 rounded-lg">
+                                    <p>B1</p>
+                                </div>
+                                <div id="B2" class="bg-slate-200  allBtn p-2 px-6 rounded-lg">
+                                    <p>B2</p>
+                                </div>
+                                <div id="B3" class="bg-slate-200  allBtn p-2 px-6 rounded-lg">
+                                    <p>B3</p>
+                                </div>
+                                <div id="B4" class="bg-slate-200 allBtn  p-2 px-6 rounded-lg">
+                                    <p>B4</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- ------------ -->
                     </div>
-                    
+
 
                     <!-- Right Seat Calculation-->
                     <div class=" mt-5 ">
-                        <div>
+                        <div class="">
                             <h2 class="text-lg font-semibold p-5">Select Your Seat</h2>
                         </div>
-                        <table class="table table-zebra">
-                          <!-- head -->
-                          <thead class="px-10">
-                            <tr>
-                              <th>Seat</th>
-                              <th>Class</th>
-                              <th>Price</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <!-- row 1 -->
-                            <tr>
-                        
-                              <td>A1</td>
-                              <td>Economoy</td>
-                              <td>550</td>
-                            </tr>
-                            <!-- row 2 -->
-                            <tr>
-                              
-                              <td>A2</td>
-                              <td>Economoy</td>
-                              <td>550</td>
-                            </tr>
-                            <thead>
-                                <tr>
-                                  <th>Total</th>
-                                  <th></th>
-                                  <th>BDT</th>
-                                </tr>
-                              </thead>
-
-                          </tbody>
-                        </table>
-                      </div>
+                        <div class="flex justify-between select-container">
+                            <ul id="select-container" class="flex gap-x-20 font-bold">
+                                <li>Seat</li>
+                                <li>Class</li>
+                                <li>Price</li>
+                            </ul>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -300,6 +278,11 @@
 
 
     </header>
+
+
+    <!-- javascript -->
+    <script src="scripts/script.js"></script>
+
 </body>
 
 </html>
