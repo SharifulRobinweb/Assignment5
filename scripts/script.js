@@ -1,7 +1,7 @@
 const allBtn = document.getElementsByClassName('allBtn');
 
 let count = 0;
-let remain = 8;
+let remain = 16;
 
 
 for (const btn of allBtn) {
@@ -9,7 +9,8 @@ for (const btn of allBtn) {
         count = count + 1;
         remain = remain - 1;
 
-        const selectedSeat = document.getElementById('selected-seat');
+        if( count <= 4){
+            const selectedSeat = document.getElementById('selected-seat');
         selectedSeat.innerText = count;
 
         btn.classList.add('bg-green-400');
@@ -51,6 +52,10 @@ for (const btn of allBtn) {
         const convertedTotalCost = parseInt(totalCost);
 
         document.getElementById('total-cost').innerText = convertedTotalCost + parseInt(price);
+        }
+        else{
+
+        }
 
 
         
