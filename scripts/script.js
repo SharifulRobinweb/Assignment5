@@ -59,54 +59,58 @@ for (const btn of allBtn) {
 
 
             // Total cost
-            const totalCost = document.getElementById("total-cost").innerText;
-            const convertedTotalCost = parseInt(totalCost);
-            const sum = convertedTotalCost + parseInt(price); 
-
-            document.getElementById('total-cost').innerText = sum;
+            // const totalCost = document.getElementById("total-cost").innerText;
+            // const convertedTotalCost = parseInt(totalCost);
+            // const sum = convertedTotalCost + parseInt(price); 
+            totalCostFun("total-cost",parseInt(price));
+            // document.getElementById('total-cost').innerText = sum;
             //Grand Total
-            const grandTotalText = document.getElementById("grand-cost").innerText;
-            const grandTotal = parseInt(grandTotalText);
-            const sum2 = grandTotal + parseInt(price);
-            document.getElementById("grand-cost").innerText = sum2;
+            // const grandTotalText = document.getElementById("grand-cost").innerText;
+            // const grandTotal = parseInt(grandTotalText);
+            // const sum2 = grandTotal + parseInt(price);
+            // document.getElementById("grand-cost").innerText = sum2;
 
-
+            // setInnerText("total-cost",sum);
+            // setInnerText("grand-cost",sum2);
+            grandTotalCostFun("grand-cost",parseInt(price));
 
             e.target.setAttribute("disabled",true);
-
-
         }
 
         else {
-
-            alert("Already you selected 4 seat");
+           alert("Already you selected 4 seat");
         }
-
-
-
-
-
-
     })
 }
 
+function totalCostFun(id,value){
+    const totalCost = document.getElementById(id).innerText;
+    const convertedTotalCost = parseInt(totalCost);
+    const sum = convertedTotalCost + parseInt(value); 
 
-
-
-
-
-
-
-
-
-
-function hideElementById(elementId) {
-    const element = document.getElementById(elementId);
-    element.classList.remove('bg-slate-200');
+    setInnerText(id,sum);
 }
-function showElementById(elementId) {
-    const element = document.getElementById(elementId);
-    element.classList.add('bg-orange-400');
+
+function grandTotalCostFun(id,value){
+    const totalCost = document.getElementById(id).innerText;
+    const convertedTotalCost = parseInt(totalCost);
+    const sum = convertedTotalCost + parseInt(value); 
+
+    setInnerText(id,sum);
 }
+
+
+function setInnerText(id,value){
+    document.getElementById(id).innerText = value;
+
+}
+
+
+
+
+
+
+
+
 
 
